@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, testDrawable!</string>
+    <string name="app_name">HDOS解密</string>
+    <string name="us_info">作者：ayin1989dy@qq.com</string>
+    <string name="game_info">使用说明：在规定步数内，把相邻的两个方块横向互换，当然也可以单个横向移动，使相同颜色的3个或3个以上方块横向相连或者纵向相连，消除它们，所有方块消除了就算过关。拖动白色长框可以选择要调换的方块。\n游戏简介：这是一款极具挑战性的益智游戏__HDOS DataBank 滑移彩色方块，游戏来自www.gameredaim.com，是为了纪念俄罗斯方块和口袋妖怪之谜等游戏，你的任务是破译HDOS数据库，读取里面的政府秘密项目文件，快来打通这令人欲罢不能的35关吧。</string>
+</resources>
