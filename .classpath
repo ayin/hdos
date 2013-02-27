@@ -2,6 +2,12 @@
 <classpath>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="lib" path="F:/workspace/android/AdLib/AdViewSDK_Android.jar"/>
+	<classpathentry exported="true" kind="lib" path="F:/workspace/android/AdLib/youmi-android_v3.05.jar"/>
+	<classpathentry exported="true" kind="lib" path="F:/workspace/android/AdLib/domob_android_sdk-2.2.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="F:/workspace/android/AdLib/GoogleAdMobAdsSdk-4.3.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="F:/workspace/android/AdLib/Tencent_MobWIN_BASIC_1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="F:/workspace/android/AdLib/Tencent_MobWIN_SDK_1.3.jar"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="output" path="bin/classes"/>

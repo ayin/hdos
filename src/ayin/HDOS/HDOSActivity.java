@@ -20,6 +20,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class HDOSActivity extends Activity {
@@ -84,6 +85,7 @@ public class HDOSActivity extends Activity {
                 } 
         });
         
+        new MyAd(this);
 	}
 	float x,y;
 	public boolean onTouchEvent(MotionEvent event) {
@@ -163,10 +165,27 @@ public class HDOSActivity extends Activity {
 			}	
 		}
 	}
+	public void startGameView(byte index){
+		setContentView(R.layout.game);
+		LinearLayout game = (LinearLayout)findViewById(R.id.game);
+		GameView mGameView = new GameView(this,index);
+		game.addView(mGameView);
+		game.invalidate();
+		new MyAd(this);
+	}
+	
+	
 	public void start(byte index){
 		if(index<=data.level){
 			curLevel=index;
-			setContentView(new GameView(this,index));
+			
+			startGameView(index);
+			//LinearLayout ads = (LinearLayout)findViewById(R.id.adLayout);
+			//AdViewLayout adViewLayout = new AdViewLayout(this, "SDK20132226100223tbr1jqkrcz6h9oq"); 
+			//ads.addView(adViewLayout); 
+			//ads.invalidate(); 
+			
+			//setContentView(new GameView(this,index));
 			data.curView=4;
 		}
 	}
@@ -180,7 +199,8 @@ public class HDOSActivity extends Activity {
     				public void onClick(DialogInterface dialog, int id) {
     					curLevel++;
     					if(curLevel>34)curLevel=0;
-    					setContentView(new GameView(cont,curLevel));
+    					//setContentView(new GameView(cont,curLevel));
+    					startGameView(curLevel);
     				} 
     			}) 
     			.setNegativeButton("取消", new DialogInterface.OnClickListener() { 
@@ -195,7 +215,8 @@ public class HDOSActivity extends Activity {
     			.setCancelable(false) 
     			.setPositiveButton("确定", new DialogInterface.OnClickListener() { 
     				public void onClick(DialogInterface dialog, int id) {
-    					setContentView(new GameView(cont,curLevel));
+    					//setContentView(new GameView(cont,curLevel));
+    					startGameView(curLevel);
     				}
     			}) 
     			.setNegativeButton("放弃", new DialogInterface.OnClickListener() { 

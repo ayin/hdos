@@ -15,6 +15,38 @@
             </intent-filter>
         </activity>
         
+		<activity android:name="net.youmi.android.AdActivity" 
+			android:configChanges="keyboard|keyboardHidden|orientation"/> 
+		<receiver android:name="net.youmi.android.YoumiReceiver"> 
+		<intent-filter> 
+    	  <action android:name="android.intent.action.PACKAGE_ADDED"/> 
+    		  <action android:name="android.intent.action.PACKAGE_INSTALL"/> 
+			<data android:scheme="package"/>  
+		</intent-filter> 
+		
+		</receiver>
+		<activity android:name="com.google.ads.AdActivity"
+              android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+		<activity android:name="cn.domob.android.ads.DomobActivity" 
+			android:theme =  "@android:style/Theme.Translucent" />
+		<activity android:name="com.tencent.mobwin.MobinWINBrowserActivity" /> 
+		
+		<service android:name="com.kyview.DownloadService" /> 
+		<activity android:name="com.kyview.AdviewWebView" />
+		
+		<meta-data android:name="YOUMI_CHANNEL" android:value="10020"></meta-data>
+		<meta-data android:name="AdView_CHANNEL"   android:value="GFAN"></meta-data>
     </application>
-
+    
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/> 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> 
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+	<meta-data android:name="installed_auto_start_app" android:value="true"/>
 </manifest>

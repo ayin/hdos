@@ -3,6 +3,9 @@
  * 
  * 1、线程中变量未加锁    导致OnDraw中可能出现的冲突   比如explosionBmp[9]和moveLeft等
  * 2、触摸效果   真机上稍微点击一下中间就会包括移动动作，而模拟器上不会，所以可以在移动中加入判定。
+ * 
+ * modift time:		20130226
+ * delete ads and compatible to the MX
  */
  
 package ayin.HDOS;
@@ -92,12 +95,6 @@ public class GameView extends View {
         scaleYOff=((int)(scaleBmp[0].getHeight()*Size/temp)-Size)>>1;
         dx=-scaleXOff;
         dy=-scaleYOff;
-        
-        System.out.println(brickBmp.getDensity()+" "+brickBmp.getHeight()+" "+brickBmp.getWidth());
-        System.out.println(scaleBmp[0].getDensity()+" "+scaleBmp[0].getHeight()+" "+scaleBmp[0].getWidth());
-        System.out.println(explosionBmp[0].getDensity()+" "+explosionBmp[0].getHeight()+" "+explosionBmp[0].getWidth());
-        System.out.println(temp);
-        System.out.println(dx+" "+dy);
     }
 	long curFrame=0;
 	protected void onDraw(Canvas canvas) {
